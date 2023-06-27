@@ -2,7 +2,12 @@
 
 def training_wheels(func, *params):
     '''
-    Runs a function in a try-except statement to make sure it doesn't crash but can run properly (i.e. without debug print statements) if it's used in beta-testing.
+    Runs a function in a try-except statement to make sure it doesn't crash but can run properly (i.e. without debug print statements) if it's used in beta-testing. If function is a procedure, returns None.
+
+    func: `function`
+        The function being tested.
+    *params: `any`
+        The parameters (if any) for func
     '''
     try:
         return func(*params)
